@@ -8,4 +8,37 @@
         string[] kodeBuah = { "A00", "B00", "C00", "D00", "E00", "F00", "H00", "I00", "J00" };
         return kodeBuah[(int)BUAH];
     }
+
+    
+}
+
+public class PosisiKarakteraGame
+{
+    enum state { berdiri, terbang };
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("buah " + kodeBuah.buah.aprikot + " kode buah nya adalah " + kodeBuah.getKodeBuah(kodeBuah.buah.aprikot));
+        Console.WriteLine("perintah: ");
+
+        state gerak = state.berdiri;
+        string Perintah = "tombolS";
+
+        ///menggunakan perulangan agar pada saat menginputkan printah yang tidak tersedia maka langsung keluar dari program
+        while (Perintah == "tombolS" || Perintah == "tombolW")
+        {
+            Console.WriteLine(gerak);
+            Console.Write("Masukkan Perintah: ");
+            Perintah = Console.ReadLine();
+
+            if (Perintah == "tombolW")
+            {
+                gerak = state.terbang;
+            }
+            else if (Perintah == "tombolS")
+            {
+                gerak = state.berdiri;
+            }
+        }
+    }
 }
