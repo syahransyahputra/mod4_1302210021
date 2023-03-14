@@ -14,30 +14,31 @@
 
 public class PosisiKarakteraGame
 {
-    enum state { berdiri, terbang };
+    //enum state { berdiri, terbang };
 
     public static void Main(string[] args)
     {
         Console.WriteLine("buah " + kodeBuah.buah.aprikot + " kode buah nya adalah " + kodeBuah.getKodeBuah(kodeBuah.buah.aprikot));
         Console.WriteLine("perintah: ");
 
-        state gerak = state.berdiri;
+        //state gerak = state.berdiri;
         string Perintah = "tombolS";
 
-        ///menggunakan perulangan agar pada saat menginputkan printah yang tidak tersedia maka langsung keluar dari program
         while (Perintah == "tombolS" || Perintah == "tombolW")
         {
-            Console.WriteLine(gerak);
+            //Console.WriteLine(gerak);
             Console.Write("Masukkan Perintah: ");
             Perintah = Console.ReadLine();
 
             if (Perintah == "tombolW")
             {
-                gerak = state.terbang;
+                Console.WriteLine("tombol arah atas di tekan");
+                //gerak = state.terbang;
             }
             else if (Perintah == "tombolS")
             {
-                gerak = state.berdiri;
+                Console.WriteLine("tombol arah bawah di tekan");
+                //gerak = state.berdiri;
             }
         }
     }
